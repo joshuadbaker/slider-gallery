@@ -7,6 +7,15 @@ $(function(){
 	// set the width of the slide tray
 	$('#slide_tray').width(slideWidth * slideCount);
 
+	//hide arrows
+	$('#next, #prev').hide();
+
+	$('#frame').hover(function(){
+		$('#next, #prev').show();
+	}, function() {
+		$('#next, #prev').hide();
+	});
+
 	$('#next').click(function(){
 		if (pos < slideCount - 1) {
 			pos += 1;
